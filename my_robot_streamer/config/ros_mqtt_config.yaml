@@ -1,0 +1,10 @@
+broker:
+  host: 54.87.65.252
+  port: 1883
+  username: srinivas18  
+  password: mosquitto  
+ 
+bridge:
+  ros2mqtt:
+    - ros_topic: image_raw
+      mqtt_topic: /ros/mqtt_video
