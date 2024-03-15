@@ -12,8 +12,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/my_robot_streamer/launch', glob('ros2_ws/src/my_robot_streamer/launch/*.launch.py')),  
-        ('share/my_robot_streamer/config', glob('ros2_ws/src/my_robot_streamer/config/*.yaml'))
+        (os.path.join('share','my_robot_streamer','launch'), glob(os.path.join('launch','*.launch.py'))), 
+        ('src/my_robot_streamer/config', glob('ros2_ws/src/my_robot_streamer/config/*.yaml'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
